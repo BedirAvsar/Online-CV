@@ -1,71 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bedir Avsar | Project Archive</title>
+    
+    <link rel="stylesheet" href="./Online-CV/Online-CV/solution.css"> 
     <style>
+
+        :root {
+            --window-bg: rgba(30, 30, 30, 0.65);
+            --accent: #0A84FF;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --border-subtle: rgba(255, 255, 255, 0.1);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            background: linear-gradient(135deg, #1c1c1e 0%, #000000 100%);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; 
+        }
+
+        .main-window {
+            width: 100%;
+            max-width: 480px; 
+            background: var(--window-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 20px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 40px 80px -12px rgba(0, 0, 0, 0.8);
+            position: relative;
+            padding: 3rem 2rem;
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
         }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            max-width: 500px;
-            width: 90%;
+
+        .window-controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 8px;
         }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background-color: #FF5F57; }
+        .yellow { background-color: #FEBC2E; }
+        .green { background-color: #28C840; }
+
         h1 {
-            font-size: 2rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-top: 1rem;
             margin-bottom: 0.5rem;
-            color: #2c3e50;
+            background: linear-gradient(90deg, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
         p {
-            color: #7f8c8d;
-            margin-bottom: 2rem;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #0A84FF; 
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            color: var(--text-muted);
             font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
         }
-        .btn:hover {
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(10, 132, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .action-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(10, 132, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(10, 132, 255, 0.5);
+            background-color: #007aff;
         }
+
         .footer {
-            margin-top: 2rem;
-            font-size: 0.8rem;
-            color: #bdc3c7;
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
+
 <body>
 
-    <div class="container">
+    <div class="main-window">
+        <div class="window-controls">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+        </div>
+
         <h1>Bedir Avsar</h1>
         <p>Software Engineering Learning Journey</p>
         
-        <a href="./Online-CV/index.html" class="btn">🚀 View My Professional Resume</a>
+        <a href="./Online-CV/index.html" class="action-btn">
+             View My Professional Resume
+        </a>
 
         <div class="footer">
-            &copy; 2025 Bedir Avsar
+            &copy; 2025 Bedir Avsar • Engineered with Passion
         </div>
     </div>
 
